@@ -41,15 +41,17 @@ class HomeFragment : Fragment() {
         loadingData()
     }
 
-    private fun loadingData() = lifecycleScope.launch {
-        viewModel.listData.collect { pagingData ->
-            characterAdapter.submitData(pagingData)
+    private fun loadingData() {
+        lifecycleScope.launch {
+            viewModel.listData.collect { pagingData ->
+                characterAdapter.submitData(pagingData)
+            }
         }
     }
 
-    private fun initRecyclerView() = with(binding) {
+    private fun initRecyclerView() {
         characterAdapter = CharacterPagedAdapter()
-        rvCharacters.apply {
+        binding.rvCharacters.apply {
             layoutManager = StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
             adapter = characterAdapter
             setHasFixedSize(true)

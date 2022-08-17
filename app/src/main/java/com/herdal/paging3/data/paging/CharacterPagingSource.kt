@@ -10,12 +10,12 @@ class CharacterPagingSource(
 ) : PagingSource<Int, Character>() {
     override fun getRefreshKey(state: PagingState<Int, Character>): Int? = null
 
-    override suspend fun load(params: LoadParams<Int>): LoadResult<Int, Character> {
-        return try {
+    override suspend fun load(params: LoadParams<Int>): LoadResult<Int, Character> =
+        try {
             val pageNumber = params.key ?: 1
             val response = repository.getAllCharacters(pageNumber)
-            val prevKey = if (pageNumber > 0) pageNumber - 1 else null
-            val data = response.body()?.characters ?: emptyList()
+            val prevKey = if (pageNumber == 1) null else -1
+            val data = response.body()?.results ?: emptyList()
             val responseData = mutableListOf<Character>()
             responseData.addAll(data)
 
@@ -27,5 +27,4 @@ class CharacterPagingSource(
         } catch (e: Exception) {
             LoadResult.Error(e)
         }
-    }
 }

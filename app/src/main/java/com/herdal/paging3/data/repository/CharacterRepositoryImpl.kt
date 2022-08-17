@@ -8,6 +8,4 @@ import retrofit2.Response
 class CharacterRepositoryImpl(private val apiService: ApiService) : CharacterRepository {
     override suspend fun getAllCharacters(page: Int): Response<CharacterResponse> =
         apiService.getAllCharacters(page)
-
-
 }
