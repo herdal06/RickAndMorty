@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import coil.load
 import com.herdal.paging3.data.model.Character
 import com.herdal.paging3.databinding.ItemCharacterBinding
+import com.herdal.paging3.utils.extensions.loadImage
 
 
 class CharacterPagedAdapter :
@@ -34,10 +35,7 @@ class CharacterPagedAdapter :
         holder.binding.apply {
             tvCharacterName.text = "${currentItem?.name}"
             val imageLink = currentItem?.image
-            imageView.load(imageLink) {
-                crossfade(true)
-                crossfade(1000)
-            }
+            imageView.loadImage(imageLink)
         }
     }
 
