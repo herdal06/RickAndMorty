@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
-import androidx.recyclerview.widget.StaggeredGridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.herdal.paging3.databinding.FragmentHomeBinding
 import com.herdal.paging3.presentation.home.adapter.CharacterPagedAdapter
 import dagger.hilt.android.AndroidEntryPoint
@@ -29,7 +29,7 @@ class HomeFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val view = binding.root
         return view
@@ -52,7 +52,7 @@ class HomeFragment : Fragment() {
     private fun initRecyclerView() {
         characterAdapter = CharacterPagedAdapter()
         binding.rvCharacters.apply {
-            layoutManager = StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
+            layoutManager = LinearLayoutManager(requireContext())
             adapter = characterAdapter
             setHasFixedSize(true)
         }

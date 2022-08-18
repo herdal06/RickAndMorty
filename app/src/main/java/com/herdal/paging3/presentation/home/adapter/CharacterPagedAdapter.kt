@@ -5,7 +5,6 @@ import android.view.ViewGroup
 import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
-import coil.load
 import com.herdal.paging3.data.model.Character
 import com.herdal.paging3.databinding.ItemCharacterBinding
 import com.herdal.paging3.utils.extensions.loadImage
@@ -34,6 +33,9 @@ class CharacterPagedAdapter :
 
         holder.binding.apply {
             tvCharacterName.text = "${currentItem?.name}"
+            tvStatus.text = "${currentItem?.status}"
+            tvGender.text = "${currentItem?.gender}"
+            tvFirstSeenIn.text = currentItem?.location?.name
             val imageLink = currentItem?.image
             imageView.loadImage(imageLink)
         }

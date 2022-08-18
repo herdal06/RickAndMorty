@@ -2,4 +2,11 @@
     <string name="app_name">Paging3</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="first_seen_in">First seen in:</string>
+    <string name="hyphen">-</string>
+    <string name="character_image">Character image</string>
+    <string name="location_example">Earth (Replacement Dimension)</string>
+    <string name="gender_example">Male</string>
+    <string name="status_example">Alive</string>
+    <string name="name_example">Rick Sanchez</string>
 </resources>
