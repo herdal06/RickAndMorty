@@ -10,4 +10,8 @@
     <string name="status_example">Alive</string>
     <string name="name_example">Rick Sanchez</string>
     <string name="character_status_color">Character Status color</string>
+    <string name="species_example">Human</string>
+    <string name="origin_example">Earth (C-137)</string>
+    <string name="origin">Origin</string>
+    <string name="location">Location</string>
 </resources>
