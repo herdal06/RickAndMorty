@@ -12,11 +12,17 @@ import com.herdal.paging3.enums.CharacterStatusEnums
 import com.herdal.paging3.utils.extensions.loadImage
 
 
-class CharacterPagedAdapter :
+class CharacterPagedAdapter(private val onClickCharacter: ((character: Character) -> Unit)?) :
     PagingDataAdapter<Character, CharacterPagedAdapter.MyViewHolder>(diffCallback) {
 
     inner class MyViewHolder(val binding: ItemCharacterBinding) :
-        RecyclerView.ViewHolder(binding.root)
+        RecyclerView.ViewHolder(binding.root) {
+        fun setOnCharacterClickListener(character: Character) {
+            itemView.setOnClickListener {
+                onClickCharacter?.invoke(character)
+            }
+        }
+    }
 
     companion object {
         val diffCallback = object : DiffUtil.ItemCallback<Character>() {
@@ -57,6 +63,11 @@ class CharacterPagedAdapter :
                         Color.rgb(248, 248, 22)
                     )
                 }
+            }
+        }
+        holder.itemView.setOnClickListener {
+            if (character != null) {
+                onClickCharacter?.invoke(character)
             }
         }
     }

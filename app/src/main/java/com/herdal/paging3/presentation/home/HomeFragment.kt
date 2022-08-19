@@ -7,7 +7,9 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.herdal.paging3.data.model.Character
 import com.herdal.paging3.databinding.FragmentHomeBinding
 import com.herdal.paging3.presentation.home.adapter.CharacterPagedAdapter
 import dagger.hilt.android.AndroidEntryPoint
@@ -19,7 +21,9 @@ class HomeFragment : Fragment() {
 
     private var _binding: FragmentHomeBinding? = null
     private val viewModel: HomeViewModel by viewModels()
-    private lateinit var characterAdapter: CharacterPagedAdapter
+    private val characterAdapter: CharacterPagedAdapter by lazy {
+        CharacterPagedAdapter(::onClickCharacter)
+    }
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -49,8 +53,13 @@ class HomeFragment : Fragment() {
         }
     }
 
+    private fun onClickCharacter(character: Character) {
+        findNavController().navigate(
+            HomeFragmentDirections.actionHomeFragmentToCharacterDetailsFragment(character)
+        )
+    }
+
     private fun initRecyclerView() {
-        characterAdapter = CharacterPagedAdapter()
         binding.rvCharacters.apply {
             layoutManager = LinearLayoutManager(requireContext())
             adapter = characterAdapter
