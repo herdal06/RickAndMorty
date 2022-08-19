@@ -31,19 +31,19 @@ class CharacterPagedAdapter :
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-        val currentItem = getItem(position)
+        val character = getItem(position)
 
         holder.binding.apply {
-            tvCharacterName.text = "${currentItem?.name}"
-            tvStatus.text = "${currentItem?.status}"
-            tvGender.text = "${currentItem?.gender}"
-            tvFirstSeenIn.text = currentItem?.location?.name
-            val imageLink = currentItem?.image
+            tvCharacterName.text = "${character?.name}"
+            tvStatus.text = "${character?.status}"
+            tvGender.text = "${character?.gender}"
+            tvFirstSeenIn.text = character?.location?.name
+            val imageLink = character?.image
             imageView.loadImage(imageLink)
 
 
-            if (currentItem != null) {
-                when (currentItem.status) {
+            if (character != null) {
+                when (character.status) {
                     CharacterStatusEnums.CHARACTER_ALIVE.value -> ivCharacterStatus.setBackgroundColor(
                         Color.rgb(20, 217, 27)
                     )
