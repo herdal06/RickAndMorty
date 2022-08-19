@@ -3,7 +3,7 @@ package com.herdal.paging3.di
 import com.herdal.paging3.data.repository.CharacterRepositoryImpl
 import com.herdal.paging3.data.service.ApiService
 import com.herdal.paging3.domain.repository.CharacterRepository
-import com.herdal.paging3.utils.Constants
+import com.herdal.paging3.utils.ApiConstants
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -17,7 +17,7 @@ import javax.inject.Singleton
 object NetworkModule {
 
     @Provides
-    fun provideBaseUrl() = Constants.BASE_URL
+    fun provideBaseUrl() = ApiConstants.BASE_URL
 
     @Provides
     @Singleton

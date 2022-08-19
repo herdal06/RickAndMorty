@@ -1,5 +1,6 @@
 package com.herdal.paging3.presentation.home.adapter
 
+import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.paging.PagingDataAdapter
@@ -7,6 +8,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.herdal.paging3.data.model.Character
 import com.herdal.paging3.databinding.ItemCharacterBinding
+import com.herdal.paging3.enums.CharacterStatusEnums
 import com.herdal.paging3.utils.extensions.loadImage
 
 
@@ -38,6 +40,24 @@ class CharacterPagedAdapter :
             tvFirstSeenIn.text = currentItem?.location?.name
             val imageLink = currentItem?.image
             imageView.loadImage(imageLink)
+
+
+            if (currentItem != null) {
+                when (currentItem.status) {
+                    CharacterStatusEnums.CHARACTER_ALIVE.value -> ivCharacterStatus.setBackgroundColor(
+                        Color.rgb(20, 217, 27)
+                    )
+                    CharacterStatusEnums.CHARACTER_DEAD.value -> ivCharacterStatus.setColorFilter(
+                        Color.rgb(255, 8, 0)
+                    )
+                    CharacterStatusEnums.CHARACTER_UNKNOWN.value -> ivCharacterStatus.setColorFilter(
+                        Color.rgb(227, 227, 227)
+                    )
+                    else -> ivCharacterStatus.setColorFilter(
+                        Color.rgb(248, 248, 22)
+                    )
+                }
+            }
         }
     }
 

@@ -1,6 +1,9 @@
 package com.herdal.paging3.utils
 
-object Constants {
+object ApiConstants {
     const val BASE_URL: String = "https://rickandmortyapi.com/api/"
-    const val END_POINT: String = "character"
+
+    object Endpoints {
+        const val CHARACTER: String = "character"
+    }
 }

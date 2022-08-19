@@ -9,4 +9,5 @@
     <string name="gender_example">Male</string>
     <string name="status_example">Alive</string>
     <string name="name_example">Rick Sanchez</string>
+    <string name="character_status_color">Character Status color</string>
 </resources>
