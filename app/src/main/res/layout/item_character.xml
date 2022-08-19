@@ -13,7 +13,7 @@
         android:orientation="vertical">
 
 
-        <ImageView
+        <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/imageView"
             android:layout_width="150dp"
             android:layout_height="0dp"
@@ -22,6 +22,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MaterialComponents.MaterialCalendar.Day"
             app:srcCompat="@drawable/ic_launcher_background" />
 
         <TextView
