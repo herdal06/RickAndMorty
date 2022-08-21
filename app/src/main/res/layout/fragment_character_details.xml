@@ -23,10 +23,10 @@
         android:id="@+id/tvCharacterDetailsName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="@dimen/extra_small_margin"
         android:text="@string/name_example"
         android:textColor="@color/textColor"
-        android:textSize="30sp"
+        android:textSize="@dimen/triple_extra_large_size"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -36,11 +36,11 @@
         android:id="@+id/tvDetailsStatus"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginStart="@dimen/triple_extra_large_margin"
+        android:layout_marginTop="@dimen/triple_extra_large_margin"
         android:text="@string/status_example"
         android:textColor="@color/textColor"
-        android:textSize="22sp"
+        android:textSize="@dimen/double_extra_large_size"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvCharacterDetailsName" />
@@ -49,11 +49,11 @@
         android:id="@+id/tvDetailsSpecies"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginTop="@dimen/triple_extra_large_margin"
+        android:layout_marginEnd="@dimen/triple_extra_large_margin"
         android:text="@string/species_example"
         android:textColor="@color/textColor"
-        android:textSize="22sp"
+        android:textSize="@dimen/double_extra_large_size"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvCharacterDetailsName" />
@@ -62,7 +62,7 @@
         android:id="@+id/linearLayout4"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="@dimen/triple_extra_large_margin"
         android:gravity="center"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
@@ -74,10 +74,10 @@
             android:id="@+id/textView11"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="6dp"
+            android:layout_marginEnd="@dimen/double_extra_small_margin"
             android:text="@string/gender"
             android:textColor="@color/textColor"
-            android:textSize="18sp"
+            android:textSize="@dimen/extra_large_size"
             android:textStyle="bold" />
 
         <TextView
@@ -86,17 +86,17 @@
             android:layout_height="wrap_content"
             android:text="@string/gender_example"
             android:textColor="@color/textColor"
-            android:textSize="18sp" />
+            android:textSize="@dimen/extra_large_size" />
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/linearLayout2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="@dimen/large_margin"
         android:gravity="center"
         android:orientation="horizontal"
-        android:textSize="18sp"
+        android:textSize="@dimen/extra_large_size"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -106,10 +106,10 @@
             android:id="@+id/textView9"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="6dp"
+            android:layout_marginEnd="@dimen/double_extra_small_margin"
             android:text="@string/origin"
             android:textColor="@color/textColor"
-            android:textSize="18sp"
+            android:textSize="@dimen/extra_large_size"
             android:textStyle="bold" />
 
         <TextView
@@ -118,14 +118,14 @@
             android:layout_height="wrap_content"
             android:text="@string/origin_example"
             android:textColor="@color/textColor"
-            android:textSize="18sp" />
+            android:textSize="@dimen/extra_large_size" />
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/linearLayout3"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="@dimen/large_margin"
         android:gravity="center"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
@@ -137,10 +137,10 @@
             android:id="@+id/textView10"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="6dp"
+            android:layout_marginEnd="@dimen/double_extra_small_margin"
             android:text="@string/location"
             android:textColor="@color/textColor"
-            android:textSize="18sp"
+            android:textSize="@dimen/extra_large_size"
             android:textStyle="bold" />
 
         <TextView
@@ -149,14 +149,14 @@
             android:layout_height="wrap_content"
             android:text="@string/location_example"
             android:textColor="@color/textColor"
-            android:textSize="18sp" />
+            android:textSize="@dimen/extra_large_size" />
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/linearLayout31"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="@dimen/large_margin"
         android:gravity="center"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
@@ -168,10 +168,10 @@
             android:id="@+id/textView12"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="6dp"
+            android:layout_marginEnd="@dimen/double_extra_small_margin"
             android:text="@string/number_of_episodes"
             android:textColor="@color/textColor"
-            android:textSize="18sp"
+            android:textSize="@dimen/extra_large_size"
             android:textStyle="bold" />
 
         <TextView
@@ -180,7 +180,7 @@
             android:layout_height="wrap_content"
             android:text="@string/random_number"
             android:textColor="@color/textColor"
-            android:textSize="18sp" />
+            android:textSize="@dimen/extra_large_size" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

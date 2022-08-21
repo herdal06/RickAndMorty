@@ -3,8 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="10dp"
-    android:elevation="10dp">
+    android:layout_margin="@dimen/small_margin"
+    android:elevation="@dimen/medium_padding">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -28,13 +28,13 @@
             android:id="@+id/tvCharacterName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
+            android:layout_margin="@dimen/small_margin"
             android:layout_marginEnd="110dp"
             android:ellipsize="end"
             android:maxLines="1"
             android:text="@string/name_example"
             android:textColor="@color/textColor"
-            android:textSize="20sp"
+            android:textSize="@dimen/double_extra_large_size"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/imageView"
@@ -44,8 +44,8 @@
             android:id="@+id/textView3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginStart="@dimen/extra_small_margin"
+            android:layout_marginTop="@dimen/extra_small_margin"
             android:text="@string/first_seen_in"
             android:textColor="@color/textColor"
             app:layout_constraintStart_toEndOf="@+id/imageView"
@@ -55,15 +55,12 @@
             android:id="@+id/tvFirstSeenIn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="8dp"
+            android:layout_margin="@dimen/extra_small_margin"
             android:ellipsize="end"
             android:maxLines="1"
             android:text="@string/location_example"
             android:textColor="@color/textColor"
-            android:textSize="16sp"
+            android:textSize="@dimen/large_size"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/imageView"
@@ -73,9 +70,8 @@
             android:id="@+id/linearLayout"
             android:layout_width="0dp"
             android:layout_height="40dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
+            android:layout_marginHorizontal="@dimen/extra_small_margin"
+            android:layout_marginTop="@dimen/extra_small_margin"
             android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/imageView"
@@ -85,8 +81,8 @@
                 android:id="@+id/ivCharacterStatus"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginStart="@dimen/extra_small_margin"
+                android:layout_marginTop="@dimen/extra_small_margin"
                 android:background="@color/black"
                 android:contentDescription="@string/character_status_color" />
 
@@ -94,32 +90,31 @@
                 android:id="@+id/tvStatus"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="4dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginStart="@dimen/triple_extra_small_margin"
+                android:layout_marginTop="@dimen/extra_small_margin"
                 android:text="@string/status_example"
                 android:textColor="@color/textColor"
-                android:textSize="16sp" />
+                android:textSize="@dimen/large_size" />
 
             <TextView
                 android:id="@+id/textView5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="4dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="4dp"
+                android:layout_marginHorizontal="@dimen/triple_extra_small_margin"
+                android:layout_marginTop="@dimen/extra_small_margin"
                 android:text="@string/hyphen"
                 android:textColor="@color/textColor"
-                android:textSize="16sp" />
+                android:textSize="@dimen/large_size" />
 
             <TextView
                 android:id="@+id/tvGender"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="4dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginStart="@dimen/triple_extra_small_margin"
+                android:layout_marginTop="@dimen/extra_small_margin"
                 android:text="@string/gender_example"
                 android:textColor="@color/textColor"
-                android:textSize="16sp" />
+                android:textSize="@dimen/large_size" />
 
         </LinearLayout>
 
