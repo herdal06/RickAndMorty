@@ -16,13 +16,8 @@ class CharacterPagedAdapter(private val onClickCharacter: ((character: Character
     PagingDataAdapter<Character, CharacterPagedAdapter.MyViewHolder>(diffCallback) {
 
     inner class MyViewHolder(val binding: ItemCharacterBinding) :
-        RecyclerView.ViewHolder(binding.root) {
-        fun setOnCharacterClickListener(character: Character) {
-            itemView.setOnClickListener {
-                onClickCharacter?.invoke(character)
-            }
-        }
-    }
+        RecyclerView.ViewHolder(binding.root)
+
 
     companion object {
         val diffCallback = object : DiffUtil.ItemCallback<Character>() {
@@ -50,17 +45,17 @@ class CharacterPagedAdapter(private val onClickCharacter: ((character: Character
 
             if (character != null) {
                 when (character.status) {
-                    CharacterStatusEnums.CHARACTER_ALIVE.value -> ivCharacterStatus.setBackgroundColor(
-                        Color.rgb(20, 217, 27)
+                    CharacterStatusEnums.CHARACTER_ALIVE.value -> ivCharacterStatus.setColorFilter(
+                        Color.parseColor("#14D91B")
                     )
                     CharacterStatusEnums.CHARACTER_DEAD.value -> ivCharacterStatus.setColorFilter(
-                        Color.rgb(255, 8, 0)
+                        Color.parseColor("#FF0800")
                     )
                     CharacterStatusEnums.CHARACTER_UNKNOWN.value -> ivCharacterStatus.setColorFilter(
-                        Color.rgb(227, 227, 227)
+                        Color.parseColor("#E3E3E3")
                     )
                     else -> ivCharacterStatus.setColorFilter(
-                        Color.rgb(248, 248, 22)
+                        Color.parseColor("#F8F816")
                     )
                 }
             }
