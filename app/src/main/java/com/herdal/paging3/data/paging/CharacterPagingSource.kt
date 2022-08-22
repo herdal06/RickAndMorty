@@ -2,7 +2,7 @@ package com.herdal.paging3.data.paging
 
 import androidx.paging.PagingSource
 import androidx.paging.PagingState
-import com.herdal.paging3.data.model.Character
+import com.herdal.paging3.data.model.character.Character
 import com.herdal.paging3.domain.repository.CharacterRepository
 
 class CharacterPagingSource(

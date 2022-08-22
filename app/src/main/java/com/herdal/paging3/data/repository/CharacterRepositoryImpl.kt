@@ -1,6 +1,6 @@
 package com.herdal.paging3.data.repository
 
-import com.herdal.paging3.data.model.CharacterResponse
+import com.herdal.paging3.data.model.character.CharacterResponse
 import com.herdal.paging3.data.service.ApiService
 import com.herdal.paging3.domain.repository.CharacterRepository
 import retrofit2.Response

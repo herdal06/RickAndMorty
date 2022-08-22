@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
-import com.herdal.paging3.data.model.Character
+import com.herdal.paging3.data.model.character.Character
 import com.herdal.paging3.databinding.ItemCharacterBinding
 import com.herdal.paging3.enums.CharacterStatusEnums
 import com.herdal.paging3.utils.extensions.loadImage

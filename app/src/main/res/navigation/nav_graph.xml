@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/homeFragment">
+    app:startDestination="@id/episodesFragment">
 
     <fragment
         android:id="@+id/homeFragment"
@@ -24,6 +24,27 @@
             app:destination="@id/homeFragment" />
         <argument
             android:name="character"
-            app:argType="com.herdal.paging3.data.model.Character" />
+            app:argType="com.herdal.paging3.data.model.character.Character" />
+    </fragment>
+    <fragment
+        android:id="@+id/episodesFragment"
+        android:name="com.herdal.paging3.presentation.episodes.EpisodesFragment"
+        android:label="fragment_episodes"
+        tools:layout="@layout/fragment_episodes" >
+        <action
+            android:id="@+id/action_episodesFragment_to_episodeDetailsFragment"
+            app:destination="@id/episodeDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/episodeDetailsFragment"
+        android:name="com.herdal.paging3.presentation.episodedetails.EpisodeDetailsFragment"
+        android:label="fragment_episode_details"
+        tools:layout="@layout/fragment_episode_details" >
+        <action
+            android:id="@+id/action_episodeDetailsFragment_to_episodesFragment"
+            app:destination="@id/episodesFragment" />
+        <argument
+            android:name="episode"
+            app:argType="com.herdal.paging3.data.model.episode.Episode" />
     </fragment>
 </navigation>

@@ -9,7 +9,7 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.herdal.paging3.data.model.Character
+import com.herdal.paging3.data.model.character.Character
 import com.herdal.paging3.databinding.FragmentHomeBinding
 import com.herdal.paging3.presentation.home.adapter.CharacterPagedAdapter
 import dagger.hilt.android.AndroidEntryPoint
