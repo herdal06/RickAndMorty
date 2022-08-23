@@ -5,5 +5,6 @@ object ApiConstants {
 
     object Endpoints {
         const val CHARACTER: String = "character"
+        const val EPISODE: String = "episode"
     }
 }

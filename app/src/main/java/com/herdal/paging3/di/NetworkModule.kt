@@ -1,8 +1,10 @@
 package com.herdal.paging3.di
 
 import com.herdal.paging3.data.repository.CharacterRepositoryImpl
+import com.herdal.paging3.data.repository.EpisodeRepositoryImpl
 import com.herdal.paging3.data.service.ApiService
 import com.herdal.paging3.domain.repository.CharacterRepository
+import com.herdal.paging3.domain.repository.EpisodeRepository
 import com.herdal.paging3.utils.ApiConstants
 import dagger.Module
 import dagger.Provides
@@ -32,5 +34,11 @@ object NetworkModule {
     @Singleton
     fun provideCharacterRepository(apiService: ApiService): CharacterRepository {
         return CharacterRepositoryImpl(apiService)
+    }
+
+    @Provides
+    @Singleton
+    fun provideEpisodeRepository(apiService: ApiService): EpisodeRepository {
+        return EpisodeRepositoryImpl(apiService)
     }
 }
