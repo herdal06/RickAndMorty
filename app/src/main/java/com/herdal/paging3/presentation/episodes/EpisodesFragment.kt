@@ -8,7 +8,6 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
-import androidx.recyclerview.widget.DividerItemDecoration
 import com.herdal.paging3.data.model.episode.Episode
 import com.herdal.paging3.databinding.FragmentEpisodesBinding
 import com.herdal.paging3.presentation.episodes.adapter.EpisodeAdapter

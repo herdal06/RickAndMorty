@@ -20,6 +20,5 @@
     <string name="episode_example">S01E09</string>
     <string name="episode_name_example">Something Ricked This Way Comes</string>
     <string name="air_date_example">March 24, 2014</string>
-    <string name="dot_symbol">•</string>
     <string name="air_date">Air Date:</string>
 </resources>
