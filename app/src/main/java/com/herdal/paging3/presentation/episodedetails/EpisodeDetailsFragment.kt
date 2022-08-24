@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.navArgs
 import com.herdal.paging3.databinding.FragmentEpisodeDetailsBinding
+import com.herdal.paging3.presentation.episodedetails.adapter.EpisodeCharactersAdapter
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -14,6 +15,9 @@ class EpisodeDetailsFragment : Fragment() {
 
     private var _binding: FragmentEpisodeDetailsBinding? = null
     private val args: EpisodeDetailsFragmentArgs by navArgs()
+    private val episodeCharactersAdapter: EpisodeCharactersAdapter by lazy {
+        EpisodeCharactersAdapter()
+    }
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -32,6 +36,12 @@ class EpisodeDetailsFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initViews()
+        initRecyclerView()
+    }
+
+    private fun initRecyclerView() = binding.rvEpisodeCharacters.apply {
+        adapter = episodeCharactersAdapter
+        setHasFixedSize(true)
     }
 
     private fun getArgs() = args.episode
