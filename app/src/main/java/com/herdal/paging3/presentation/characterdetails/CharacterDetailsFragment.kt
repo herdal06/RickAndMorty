@@ -5,7 +5,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.navArgs
 import com.herdal.paging3.databinding.FragmentCharacterDetailsBinding
 import com.herdal.paging3.utils.extensions.loadImage
@@ -15,7 +14,6 @@ import dagger.hilt.android.AndroidEntryPoint
 class CharacterDetailsFragment : Fragment() {
 
     private var _binding: FragmentCharacterDetailsBinding? = null
-    private val viewModel: CharacterDetailsViewModel by viewModels()
     private val args: CharacterDetailsFragmentArgs by navArgs()
 
     // This property is only valid between onCreateView and
