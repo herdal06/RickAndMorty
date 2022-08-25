@@ -51,6 +51,7 @@ class EpisodeDetailsFragment : Fragment() {
         binding.apply {
             tvNameDetails.text = episode.name
             tvEpisodeDetails.text = episode.episode
+            tvAirDateDetails.text = episode.air_date
         }
     }
 

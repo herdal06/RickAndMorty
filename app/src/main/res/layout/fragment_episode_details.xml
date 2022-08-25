@@ -9,34 +9,42 @@
     tools:context=".presentation.episodedetails.EpisodeDetailsFragment">
 
 
-    <TextView
-        android:id="@+id/tvNameDetails"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="@string/episode_name_example"
-        android:textSize="@dimen/double_extra_large_size"
-        android:textStyle="bold" />
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="@dimen/extra_large_padding">
+        android:layout_marginTop="@dimen/double_extra_large_margin"
+        android:orientation="horizontal">
 
         <TextView
             android:id="@+id/tvEpisodeDetails"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/rounded_corner"
+            android:gravity="center"
+            android:padding="@dimen/small_padding"
             android:text="@string/episode_example"
+            android:textColor="@color/white"
             android:textSize="@dimen/extra_large_size"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvNameDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/medium_margin"
+            android:gravity="end"
+            android:text="@string/episode_name_example"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/double_extra_large_size"
             android:textStyle="bold" />
 
     </LinearLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/double_extra_large_margin">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvEpisodeCharacters"
@@ -46,7 +54,30 @@
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout6"
             tools:listitem="@layout/item_episode_character" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout6"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tvAirDateDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/large_margin"
+                android:layout_marginBottom="@dimen/double_extra_large_margin"
+                android:background="@drawable/rounded_corner"
+                android:gravity="center"
+                android:text="@string/air_date_example"
+                android:textColor="@color/white"
+                android:textSize="@dimen/extra_large_size"
+                android:textStyle="bold" />
+        </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </LinearLayout>
