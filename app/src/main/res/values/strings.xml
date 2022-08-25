@@ -21,4 +21,6 @@
     <string name="episode_name_example">Something Ricked This Way Comes</string>
     <string name="air_date_example">March 24, 2014</string>
     <string name="air_date">Air Date:</string>
+    <string name="characters">Characters</string>
+    <string name="episodes">Episodes</string>
 </resources>
