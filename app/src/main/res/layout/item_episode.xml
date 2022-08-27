@@ -37,6 +37,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="@dimen/triple_extra_small_margin"
                 android:text="@string/episode_example"
+                android:textColor="@color/headerTextColor"
                 android:textSize="@dimen/extra_large_size"
                 android:textStyle="bold" />
 
@@ -45,6 +46,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/hyphen"
+                android:textColor="@color/headerTextColor"
                 android:textSize="@dimen/extra_large_size"
                 android:textStyle="bold" />
 
@@ -56,6 +58,7 @@
                 android:ellipsize="end"
                 android:maxLines="1"
                 android:text="@string/episode_name_example"
+                android:textColor="@color/headerTextColor"
                 android:textSize="@dimen/extra_large_size"
                 android:textStyle="bold" />
         </LinearLayout>
@@ -75,6 +78,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/large_margin"
                 android:text="@string/air_date"
+                android:textColor="@color/headerTextColor"
                 android:textSize="@dimen/large_size"
                 android:textStyle="bold" />
 
@@ -85,6 +89,7 @@
                 android:layout_marginStart="@dimen/extra_small_margin"
                 android:layout_marginBottom="@dimen/large_margin"
                 android:text="@string/air_date_example"
+                android:textColor="@color/headerTextColor"
                 android:textSize="@dimen/large_size" />
         </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>

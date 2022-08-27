@@ -10,4 +10,6 @@
     <color name="textColor">#3C3E44</color>
     <color name="whiteTextColor">#ECECEC</color>
     <color name="headerTextColor">#3C3E44</color>
+    <color name="essential">#6298FD</color>
+    <color name="topBar">#367CFF</color>
 </resources>
