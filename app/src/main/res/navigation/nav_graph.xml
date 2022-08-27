@@ -8,17 +8,21 @@
     <fragment
         android:id="@+id/homeFragment"
         android:name="com.herdal.paging3.presentation.home.HomeFragment"
-        android:label="fragment_home"
-        tools:layout="@layout/fragment_home" >
+        android:label="Characters"
+        tools:layout="@layout/fragment_home">
         <action
             android:id="@+id/action_homeFragment_to_characterDetailsFragment"
-            app:destination="@id/characterDetailsFragment" />
+            app:destination="@id/characterDetailsFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out" />
     </fragment>
     <fragment
         android:id="@+id/characterDetailsFragment"
         android:name="com.herdal.paging3.presentation.characterdetails.CharacterDetailsFragment"
-        android:label="fragment_character_details"
-        tools:layout="@layout/fragment_character_details" >
+        android:label="Character Details"
+        tools:layout="@layout/fragment_character_details">
         <action
             android:id="@+id/action_characterDetailsFragment_to_homeFragment"
             app:destination="@id/homeFragment" />
@@ -29,17 +33,21 @@
     <fragment
         android:id="@+id/episodesFragment"
         android:name="com.herdal.paging3.presentation.episodes.EpisodesFragment"
-        android:label="fragment_episodes"
-        tools:layout="@layout/fragment_episodes" >
+        android:label="Episodes"
+        tools:layout="@layout/fragment_episodes">
         <action
             android:id="@+id/action_episodesFragment_to_episodeDetailsFragment"
-            app:destination="@id/episodeDetailsFragment" />
+            app:destination="@id/episodeDetailsFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out" />
     </fragment>
     <fragment
         android:id="@+id/episodeDetailsFragment"
         android:name="com.herdal.paging3.presentation.episodedetails.EpisodeDetailsFragment"
-        android:label="fragment_episode_details"
-        tools:layout="@layout/fragment_episode_details" >
+        android:label="Episode Details"
+        tools:layout="@layout/fragment_episode_details">
         <action
             android:id="@+id/action_episodeDetailsFragment_to_episodesFragment"
             app:destination="@id/episodesFragment" />
