@@ -1,5 +1,6 @@
 package com.herdal.paging3.data.service
 
+import com.herdal.paging3.data.model.character.Character
 import com.herdal.paging3.data.model.character.CharacterResponse
 import com.herdal.paging3.data.model.episode.EpisodeResponse
 import com.herdal.paging3.utils.ApiConstants
@@ -23,5 +24,5 @@ interface ApiService {
     @GET("character/{character-id}")
     suspend fun getCharacterById(
         @Path("character-id") characterId: Int
-    ): Response<CharacterResponse>
+    ): Response<Character>
 }
